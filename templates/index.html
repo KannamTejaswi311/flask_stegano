@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography App</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input, button, textarea { margin: 10px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Steganography - Hide & Reveal Messages</h1>
+    
+    <h2>Hide a Message</h2>
+    <form action="/hide" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required><br>
+        <textarea name="message" placeholder="Enter your secret message" required></textarea><br>
+        <button type="submit">Hide Message</button>
+    </form>
+    
+    <h2>Reveal a Message</h2>
+    <form action="/reveal" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required><br>
+        <button type="submit">Reveal Message</button>
+    </form>
+</body>
+</html>
